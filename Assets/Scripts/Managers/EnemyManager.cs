@@ -132,7 +132,7 @@ public class EnemyManager : MonoBehaviour
 		{
 			if(_bossAlive && !_bossActive)
 			{
-				_zombieBoss.rigidbody.velocity = Vector3.zero;
+				_zombieBoss.GetComponent<Rigidbody>().velocity = Vector3.zero;
 				_zombieBoss.transform.position = _lastSpawnPosition = newSpawnPos;					
 				_bossActive = true;
 				_bossGameObjectActive = true;

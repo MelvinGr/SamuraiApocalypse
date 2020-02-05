@@ -23,7 +23,7 @@ public class ZombieBoss : Enemy
 		if(_eyeObject != null)
 			_eyeObject.parent = eyeShereTransform;
 
-        foreach (AnimationState state in rootObject.animation)
+        foreach (AnimationState state in rootObject.GetComponent<Animation>())
         {
 			if (!state.name.Contains("Walk"))			
 			{
@@ -34,7 +34,7 @@ public class ZombieBoss : Enemy
 			state.blendMode = AnimationBlendMode.Blend; 
         }
 		
-        rootObject.animation.Stop();
+        rootObject.GetComponent<Animation>().Stop();
     }
 
     public override void Update()
@@ -45,7 +45,7 @@ public class ZombieBoss : Enemy
 			return;
 
         if (health > 0)
-			rootObject.animation.CrossFade("Walk");
+			rootObject.GetComponent<Animation>().CrossFade("Walk");
 			
 		if(_hitTimeout > 0)
 			_hitTimeout -= Time.deltaTime;
@@ -129,8 +129,8 @@ public class ZombieBoss : Enemy
 			{ 
 				//if(collider.rigidbody != null)
 					//Destroy(collider.rigidbody);
-				if(collider != null)
-					Destroy(collider);
+				if(GetComponent<Collider>() != null)
+					Destroy(GetComponent<Collider>());
 					
 				clone.name = "Split Right";
 		
@@ -154,13 +154,13 @@ public class ZombieBoss : Enemy
 		
 		if(health > 0)		
 		{
-			this.rigidbody.AddForce(250, 150, 0);
-			rootObject.animation.Play("Death2");
+			this.GetComponent<Rigidbody>().AddForce(250, 150, 0);
+			rootObject.GetComponent<Animation>().Play("Death2");
 		}
 		else
 		{
-			rootObject.animation.Play("Death1");
-			clone.animation.Play("Death2");
+			rootObject.GetComponent<Animation>().Play("Death1");
+			clone.GetComponent<Animation>().Play("Death2");
 		}
 		
 		if(hitAudioClips.Length > 0)

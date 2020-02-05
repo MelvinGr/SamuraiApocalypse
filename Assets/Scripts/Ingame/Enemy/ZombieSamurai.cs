@@ -14,7 +14,7 @@ public class ZombieSamurai : Enemy
     {
         base.Start();
 
-		foreach (AnimationState state in rootObject.animation)
+		foreach (AnimationState state in rootObject.GetComponent<Animation>())
         {
 			if (!state.name.Contains("Walk"))			
 			{
@@ -28,7 +28,7 @@ public class ZombieSamurai : Enemy
 				state.speed = 1.5f;
         }
 		
-        rootObject.animation.Stop();
+        rootObject.GetComponent<Animation>().Stop();
     }
 
     public override void Update()
@@ -37,11 +37,11 @@ public class ZombieSamurai : Enemy
 		
 		if(GameManager.instance.isPaused)
 		{
-			rootObject.animation.active = false;
+			rootObject.GetComponent<Animation>().enabled = false;
 			return;
 		}
 		else
-			rootObject.animation.active = true;
+			rootObject.GetComponent<Animation>().enabled = true;
 		
         if (health > 0)
         {
@@ -51,24 +51,24 @@ public class ZombieSamurai : Enemy
 				{					
 					if(_isJumping)
 					{
-						rootObject.animation.Play("Jump");
+						rootObject.GetComponent<Animation>().Play("Jump");
 						_didJump = true;
 					}
 					else
 					{
 						_isJumping = (Vector3.Distance(transform.position, Player.instance.transform.position) < jumperJumpDistance);
-						rootObject.animation.CrossFade("Walk");
+						rootObject.GetComponent<Animation>().CrossFade("Walk");
 					}
 				}
 				else
 				{
-					rootObject.animation.CrossFade("Walk");
+					rootObject.GetComponent<Animation>().CrossFade("Walk");
 					transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 				}
 			}
 			else
 			{
-				rootObject.animation.CrossFade("Walk");
+				rootObject.GetComponent<Animation>().CrossFade("Walk");
 				transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 			}
         }
@@ -91,18 +91,18 @@ public class ZombieSamurai : Enemy
     {
         base.Die();
 		
-		if(collider.rigidbody != null)
-			Destroy(collider.rigidbody);
-        if(collider != null)
-			Destroy(collider);
+		if(GetComponent<Collider>().GetComponent<Rigidbody>() != null)
+			Destroy(GetComponent<Collider>().GetComponent<Rigidbody>());
+        if(GetComponent<Collider>() != null)
+			Destroy(GetComponent<Collider>());
 		
-		rootObject.animation.Stop("Walk");
+		rootObject.GetComponent<Animation>().Stop("Walk");
 
 		switch(Player.instance.currentAnimation)
 		{
 			case Player.PlayerAnimation.HorizontalSlash:
 			{
-				rootObject.animation.Play("Death01");				
+				rootObject.GetComponent<Animation>().Play("Death01");				
 
 				foreach (Transform trans in Functions.RemoveBoneStructure(rootObject, "Samurai_Zombie_Hoofd"))
 				{

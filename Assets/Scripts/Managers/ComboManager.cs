@@ -53,8 +53,8 @@ public class ComboManager : MonoBehaviour
         {
             GameObject gameObject = new GameObject(comboTexture.guiTexture.name.Replace("_GUITexture", ""), typeof(GUITexture));
             gameObject.transform.localScale = new Vector3(0, 0, 1);
-            gameObject.guiTexture.texture = comboTexture.guiTexture;
-            gameObject.guiTexture.pixelInset = new Rect(-comboTexture.guiTexture.width / 2, -comboTexture.guiTexture.height, 
+            gameObject.GetComponent<GUITexture>().texture = comboTexture.guiTexture;
+            gameObject.GetComponent<GUITexture>().pixelInset = new Rect(-comboTexture.guiTexture.width / 2, -comboTexture.guiTexture.height, 
 				comboTexture.guiTexture.width, comboTexture.guiTexture.height);
 		
             gameObject.transform.parent = _comboGameObjects.transform;
@@ -74,7 +74,7 @@ public class ComboManager : MonoBehaviour
 			if(comboTexure.ID != comboCount)
 				continue;
 				
-			if(comboTexure.combo.active)
+			if(comboTexure.combo.enabled)
 				break;
 				
 			comboTexure.combo.SetActive(position, Time.time, duration);

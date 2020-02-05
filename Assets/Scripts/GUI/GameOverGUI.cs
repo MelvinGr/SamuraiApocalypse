@@ -22,7 +22,7 @@ public class GameOverGUI : MonoBehaviour
 	
 	void Awake()
 	{
-		newHighScore.active = false;
+		newHighScore.enabled = false;
 		_fallingGameObjects = new GameObject("FallingGameObjects");
 		_fallingGameObjects.transform.position = Vector3.zero;
 		
@@ -51,7 +51,7 @@ public class GameOverGUI : MonoBehaviour
 			trans.position -= new Vector3(0, fallSpeed / 30f, 0);
 			if(trans.position.y < lowestHeight)
 			{
-				Destroy(trans.guiTexture);
+				Destroy(trans.GetComponent<GUITexture>());
 				trans.gameObject.active = false;
 			}
 		}
@@ -80,8 +80,8 @@ public class GameOverGUI : MonoBehaviour
 			zombie.transform.position = new Vector3(fallStartPosition.x, 1 - fallStartPosition.y, 2);
 			zombie.transform.localScale = new Vector3(0, 0, 1);
 			zombie.transform.parent = _fallingGameObjects.transform;
-			zombie.guiTexture.texture = zombieTexture;
-			zombie.guiTexture.pixelInset = new Rect(-zombieTexture.width / 2, 0, zombieTexture.width, zombieTexture.height);
+			zombie.GetComponent<GUITexture>().texture = zombieTexture;
+			zombie.GetComponent<GUITexture>().pixelInset = new Rect(-zombieTexture.width / 2, 0, zombieTexture.width, zombieTexture.height);
 				
 			_fallingTransforms.Add(zombie.transform);
 			_fallCounter++;
@@ -89,6 +89,6 @@ public class GameOverGUI : MonoBehaviour
 			yield return new WaitForSeconds(fallSpawnTime);			
 		}
 		
-		newHighScore.active = (GameManager.instance.playerScore > GameManager.instance.playerHighScore);
+		newHighScore.enabled = (GameManager.instance.playerScore > GameManager.instance.playerHighScore);
 	}
 }

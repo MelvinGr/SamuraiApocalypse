@@ -11,18 +11,18 @@ public class AnimationPlayer : MonoBehaviour
     void Update()
     {
 		// check om te kijken of de animatie wel bestaat, MOET BETER!
-		try { bool t = (animation[animationName].name == name); }
+		try { bool t = (GetComponent<Animation>()[animationName].name == name); }
 		catch { return; }
 		
 		if(playSingle)
 		{
 			if(!_didPlay)
 			{		
-				animation.CrossFade(animationName);
+				GetComponent<Animation>().CrossFade(animationName);
 				_didPlay = true;
 			}
 		}
 		else
-			animation.CrossFade(animationName);
+			GetComponent<Animation>().CrossFade(animationName);
     }
 }

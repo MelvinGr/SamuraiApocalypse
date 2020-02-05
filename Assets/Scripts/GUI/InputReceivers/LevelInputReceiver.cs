@@ -27,14 +27,14 @@ public class LevelInputReceiver : InputReceiver
 					{	
 						//Time.timeScale = 0;
 						_pauseGUITexture.texture = playbuttonTexture;
-						_inGameGUI.pauseGUITexture.active = false;
+						_inGameGUI.pauseGUITexture.enabled = false;
 						GameManager.instance.Pause();
 					}
 					else
 					{	
 						//Player.instance.speed = 1;
 						_pauseGUITexture.texture = pauseButtonTexture;
-						_inGameGUI.pauseGUITexture.active = true;
+						_inGameGUI.pauseGUITexture.enabled = true;
 						GameManager.instance.Pause();
 					}
 					

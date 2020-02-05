@@ -102,8 +102,8 @@ public class Player : LivingObject
 
             foreach (Transform trans in _leftHandWeapon)
             {
-                if (trans.collider != null)
-                    Physics.IgnoreCollision(collider, trans.collider);
+                if (trans.GetComponent<Collider>() != null)
+                    Physics.IgnoreCollision(GetComponent<Collider>(), trans.GetComponent<Collider>());
             }
         }
     }
@@ -127,8 +127,8 @@ public class Player : LivingObject
 				
             foreach (Transform trans in _rightHandWeapon)
             {
-                if (trans.collider != null)
-					Physics.IgnoreCollision(collider, trans.collider);
+                if (trans.GetComponent<Collider>() != null)
+					Physics.IgnoreCollision(GetComponent<Collider>(), trans.GetComponent<Collider>());
             }
         }
     }
@@ -142,11 +142,11 @@ public class Player : LivingObject
         _leftHandRef = Functions.SearchHierarchyForbones(rootObject, "Bip01 L Hand")[0];
         _rightHandRef = Functions.SearchHierarchyForbones(rootObject, "Bip01 R Hand")[0];
 
-        rootObject.animation.Stop();
+        rootObject.GetComponent<Animation>().Stop();
 		
 		zPosition = transform.position.z;
 
-        foreach (AnimationState state in rootObject.animation)
+        foreach (AnimationState state in rootObject.GetComponent<Animation>())
         {
             if (!state.name.Contains("Slash"))
                 continue;
@@ -239,12 +239,12 @@ public class Player : LivingObject
 				else if(angle >= 150f && angle <= 210f || angle >= 90 && angle <= 150)
 					currentAnimation = PlayerAnimation.VerticalSlashTopDown;
 				
-				rootObject.animation[currentAnimation.ToString()].speed = speed;
-				rootObject.animation.Play(currentAnimation.ToString());
+				rootObject.GetComponent<Animation>()[currentAnimation.ToString()].speed = speed;
+				rootObject.GetComponent<Animation>().Play(currentAnimation.ToString());
 				
 				Functions.PlayAudioClip(slashAudioClips[UnityEngine.Random.Range(0, slashAudioClips.Length)], transform.position, 0.8f);
 				
-				_rightHandWeapon.GetComponent<Weapon>().InstantiateTrailRenderer(rootObject.animation[currentAnimation.ToString()].length);
+				_rightHandWeapon.GetComponent<Weapon>().InstantiateTrailRenderer(rootObject.GetComponent<Animation>()[currentAnimation.ToString()].length);
 				
                 SliceManager.instance.SpawnSlice(new Vector2(touch.start.x, Screen.height - touch.start.y),
                         new Vector2(touch.end.x, Screen.height - touch.end.y), 3);
@@ -280,9 +280,9 @@ public class Player : LivingObject
                 rootObject.animation.CrossFade("Jump");
             }
             else*/ if (moveSpeed > 0)
-                rootObject.animation.CrossFade("Running");
+                rootObject.GetComponent<Animation>().CrossFade("Running");
             else
-				rootObject.animation.Stop("Running");	
+				rootObject.GetComponent<Animation>().Stop("Running");	
         }
         else
         {
@@ -331,7 +331,7 @@ public class Player : LivingObject
 		moveSpeed = 0;
 		
 		if(GameObject.Find("InGameGUI_Prefab") != null)
-			GameObject.Find("InGameGUI_Prefab").GetComponent<InGameGUI>().gameOverGUITexture.active = true;
+			GameObject.Find("InGameGUI_Prefab").GetComponent<InGameGUI>().gameOverGUITexture.enabled = true;
 		
 		CameraFade cameraFade = Camera.main.GetComponent<CameraFade>();		
 		cameraFade.OnFadeOutCompleted += OnFadeOutCompleted;

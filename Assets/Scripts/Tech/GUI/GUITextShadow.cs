@@ -31,7 +31,7 @@ public class GUITextShadow : MonoBehaviour
 	
 	public void SetText(string text)
 	{
-		guiText.text = text;
+		GetComponent<GUIText>().text = text;
 		shadowGuIText.text = text;
 	}
 }

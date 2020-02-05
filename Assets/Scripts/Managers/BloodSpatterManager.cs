@@ -44,8 +44,8 @@ public class BloodSpatterManager : MonoBehaviour
         {
             GameObject gameObject = new GameObject(bloodSpatterTexture.name.Replace("_GUITexture", "(Cached)"), typeof(GUITexture));
             gameObject.transform.localScale = new Vector3(0, 0, 1);
-            gameObject.guiTexture.texture = bloodSpatterTexture;
-            gameObject.guiTexture.pixelInset = new Rect(-bloodSpatterTexture.width / 2, -bloodSpatterTexture.height / 2,
+            gameObject.GetComponent<GUITexture>().texture = bloodSpatterTexture;
+            gameObject.GetComponent<GUITexture>().pixelInset = new Rect(-bloodSpatterTexture.width / 2, -bloodSpatterTexture.height / 2,
                 bloodSpatterTexture.width, bloodSpatterTexture.height);
 
             gameObject.transform.parent = _bloodSpatterGameObjects.transform;

@@ -36,8 +36,8 @@ public class Functions
 
         GameObject plane = new GameObject(name, typeof(MeshRenderer), typeof(MeshFilter));
         plane.GetComponent<MeshFilter>().mesh = m;
-        plane.renderer.material.mainTexture = texture;
-        plane.renderer.material.shader = Shader.Find(shader);
+        plane.GetComponent<Renderer>().material.mainTexture = texture;
+        plane.GetComponent<Renderer>().material.shader = Shader.Find(shader);
 
         return plane;
     }

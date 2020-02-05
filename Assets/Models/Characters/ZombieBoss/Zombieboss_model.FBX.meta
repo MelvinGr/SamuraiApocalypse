@@ -1,0 +1,436 @@
+fileFormatVersion: 2
+guid: 4d49164eeb54700478ef3808d3108fb2
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Plate Right
+    100002: Plate Left
+    100004: Plate Back
+    100006: Plate Front
+    100008: Helm
+    100010: Upper Body
+    100012: Right Arm
+    100014: Left Arm
+    100016: Right Legg
+    100018: Bip01 Prop1
+    100020: Bip01 Prop2
+    100022: Bip01 L Finger3
+    100024: Bip01 L Finger2
+    100026: Bip01 L Finger1
+    100028: Bip01 L Finger0
+    100030: Bip01 L Hand
+    100032: Bip01 L Forearm
+    100034: Bip01 L Foot
+    100036: Bip01 L Calf
+    100038: Bip01 L Thigh
+    100040: Bip01 HeadNub
+    100042: Bip01 Head
+    100044: Bip01 R Finger4
+    100046: Bip01 R Finger3
+    100048: Skull
+    100050: Left Body
+    100052: Bip01 Neck
+    100054: Bip01 Spine3
+    100056: Bip01 Spine2
+    100058: Bip01 Spine1
+    100060: Bip01 Spine
+    100062: Bip01 Pelvis
+    100064: Bip01 Footsteps
+    100066: Bip01
+    100068: Bip01 R Finger2
+    100070: Bip01 R Finger1
+    100072: Bip01 R Finger0
+    100074: Bip01 R Hand
+    100076: Bip01 R Forearm
+    100078: Bip01 L Finger4
+    100080: //RootNode
+    100082: Bip01 Prop3
+    100084: Bip01 TailNub
+    100086: Bip01 Tail
+    100088: Bip01 R Toe0Nub
+    100090: Bip01 R Toe02
+    100092: Bip01 R Toe01
+    100094: Bip01 R Toe0
+    100096: Bip01 R Foot
+    100098: Bip01 R Calf
+    100100: Bip01 R Thigh
+    100102: Bip01 L Toe0Nub
+    100104: Bip01 L Toe02
+    100106: Bip01 L Toe01
+    100108: Bip01 L Toe0
+    100110: Left Legg
+    100112: Bip01 R Finger2Nub
+    100114: Bip01 R Finger22
+    100116: Bip01 R Finger21
+    100118: Bip01 R Finger3Nub
+    100120: Bip01 R Finger32
+    100122: Bip01 R Finger31
+    100124: Bip01 R Finger42
+    100126: Bip01 R Finger41
+    100128: Bip01 L Finger11
+    100130: Bip01 L Finger0Nub
+    100132: Bip01 L Finger02
+    100134: Bip01 L Finger01
+    100136: Bip01 R UpperArm
+    100138: Bip01 R Clavicle
+    100140: Bip01 L Finger4Nub
+    100142: Bip01 L Finger42
+    100144: Bip01 L Finger41
+    100146: Bip01 L Finger3Nub
+    100148: Bip01 L UpperArm
+    100150: Bip01 L Clavicle
+    100152: Bip01 L Finger22
+    100154: Bip01 L Finger21
+    100156: Bip01 L Finger1Nub
+    100158: Bip01 L Finger12
+    100160: Bip01 R Finger1Nub
+    100162: Bip01 R Finger12
+    100164: Bip01 R Finger11
+    100166: Bip01 R Finger0Nub
+    100168: Bip01 R Finger02
+    100170: Bip01 R Finger01
+    100172: Bip01 L Finger32
+    100174: Bip01 L Finger31
+    100176: Bip01 L Finger2Nub
+    100178: Bip01 R Finger4Nub
+    400000: Plate Right
+    400002: Plate Left
+    400004: Plate Back
+    400006: Plate Front
+    400008: Helm
+    400010: Upper Body
+    400012: Right Arm
+    400014: Left Arm
+    400016: Right Legg
+    400018: Bip01 Prop1
+    400020: Bip01 Prop2
+    400022: Bip01 L Finger3
+    400024: Bip01 L Finger2
+    400026: Bip01 L Finger1
+    400028: Bip01 L Finger0
+    400030: Bip01 L Hand
+    400032: Bip01 L Forearm
+    400034: Bip01 L Foot
+    400036: Bip01 L Calf
+    400038: Bip01 L Thigh
+    400040: Bip01 HeadNub
+    400042: Bip01 Head
+    400044: Bip01 R Finger4
+    400046: Bip01 R Finger3
+    400048: Skull
+    400050: Left Body
+    400052: Bip01 Neck
+    400054: Bip01 Spine3
+    400056: Bip01 Spine2
+    400058: Bip01 Spine1
+    400060: Bip01 Spine
+    400062: Bip01 Pelvis
+    400064: Bip01 Footsteps
+    400066: Bip01
+    400068: Bip01 R Finger2
+    400070: Bip01 R Finger1
+    400072: Bip01 R Finger0
+    400074: Bip01 R Hand
+    400076: Bip01 R Forearm
+    400078: Bip01 L Finger4
+    400080: //RootNode
+    400082: Bip01 Prop3
+    400084: Bip01 TailNub
+    400086: Bip01 Tail
+    400088: Bip01 R Toe0Nub
+    400090: Bip01 R Toe02
+    400092: Bip01 R Toe01
+    400094: Bip01 R Toe0
+    400096: Bip01 R Foot
+    400098: Bip01 R Calf
+    400100: Bip01 R Thigh
+    400102: Bip01 L Toe0Nub
+    400104: Bip01 L Toe02
+    400106: Bip01 L Toe01
+    400108: Bip01 L Toe0
+    400110: Left Legg
+    400112: Bip01 R Finger2Nub
+    400114: Bip01 R Finger22
+    400116: Bip01 R Finger21
+    400118: Bip01 R Finger3Nub
+    400120: Bip01 R Finger32
+    400122: Bip01 R Finger31
+    400124: Bip01 R Finger42
+    400126: Bip01 R Finger41
+    400128: Bip01 L Finger11
+    400130: Bip01 L Finger0Nub
+    400132: Bip01 L Finger02
+    400134: Bip01 L Finger01
+    400136: Bip01 R UpperArm
+    400138: Bip01 R Clavicle
+    400140: Bip01 L Finger4Nub
+    400142: Bip01 L Finger42
+    400144: Bip01 L Finger41
+    400146: Bip01 L Finger3Nub
+    400148: Bip01 L UpperArm
+    400150: Bip01 L Clavicle
+    400152: Bip01 L Finger22
+    400154: Bip01 L Finger21
+    400156: Bip01 L Finger1Nub
+    400158: Bip01 L Finger12
+    400160: Bip01 R Finger1Nub
+    400162: Bip01 R Finger12
+    400164: Bip01 R Finger11
+    400166: Bip01 R Finger0Nub
+    400168: Bip01 R Finger02
+    400170: Bip01 R Finger01
+    400172: Bip01 L Finger32
+    400174: Bip01 L Finger31
+    400176: Bip01 L Finger2Nub
+    400178: Bip01 R Finger4Nub
+    4300000: Right Legg
+    4300002: Left Arm
+    4300004: Right Arm
+    4300006: Upper Body
+    4300008: Helm
+    4300010: Plate Front
+    4300012: Plate Back
+    4300014: Plate Left
+    4300016: Plate Right
+    4300018: Left Legg
+    4300020: Left Body
+    4300022: Skull
+    7400002: Take 001
+    7400004: Walk
+    7400006: Death1
+    7400008: Death2
+    7400010: FlyingAway
+    7400012: AboveToDown
+    11100000: //RootNode
+    13700000: Plate Right
+    13700002: Plate Left
+    13700004: Plate Back
+    13700006: Plate Front
+    13700008: Helm
+    13700010: Upper Body
+    13700012: Right Arm
+    13700014: Left Arm
+    13700016: Right Legg
+    13700018: Skull
+    13700020: Left Body
+    13700022: Left Legg
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 3
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: 
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death1
+      takeName: 
+      firstFrame: 80
+      lastFrame: 95
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death2
+      takeName: 
+      firstFrame: 110
+      lastFrame: 152
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FlyingAway
+      takeName: 
+      firstFrame: 160
+      lastFrame: 166
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AboveToDown
+      takeName: 
+      firstFrame: 175
+      lastFrame: 190
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
